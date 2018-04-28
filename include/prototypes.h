@@ -1,3 +1,10 @@
+extern void signaling(int);
+
+extern void waiting(void);
+
+//in sleeping.c
+extern void sleeping(void);
+
 //in runforever.c
 extern void runforever(void); //extern is use to be visible from everywhere
 

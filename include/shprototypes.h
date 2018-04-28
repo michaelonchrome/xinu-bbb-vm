@@ -1,3 +1,5 @@
+extern shellcmd xsh_signal  (int);
+
 extern  shellcmd xsh_ps_ready    (int32, char*[]);
 
 extern  shellcmd  xsh_create    (int32, char *[]);

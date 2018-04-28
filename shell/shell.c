@@ -1,5 +1,5 @@
 /* shell.c  -  shell */
-
+ 
 #include <xinu.h>
 #include <stdio.h>
 #include "shprototypes.h"
@@ -30,6 +30,7 @@ const	struct	cmdent	cmdtab[] = {
     {"create", FALSE, xsh_create},
 	{"uptime",	FALSE,	xsh_uptime},
     {"ps_ready", FALSE,   xsh_ps_ready},
+    {"signal", FALSE, xsh_signal},
 	{"?",		FALSE,	xsh_help}
 
 };
