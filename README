@@ -1,0 +1,32 @@
+Michael Cheng
+CS 657 Homework 2
+Shell Commands and Processes
+============================
+
+A few new shell commands has been added to Xinu. These new commands are as follow:
+
+create   - Creates a process and set the priority to either default 20, or what the
+           user specifies. The process it can create is either 
+           1. A basic process that runs an infinity loop in the background
+           2. A sleep process that first sleeps then runs an infinit loop in the 
+              background.
+           3. A wait process that waits on a signal to exit out of the process
+
+create <pirority INT> <process_type CHAR>
+
+Process Type :
+        --sleep : Creates a process, put it to sleep, then run an infinite loop
+        --wait  : Creates a process that waits on a global semaphore to exit
+
+Example : create 10 --sleep
+
+ps_ready - A modify version of ps to show only the processes that are ready.
+
+Example : ps_ready
+
+signal : Signals a global semaphore. Takes an integer argument for how many times
+         to signal that semaphore.
+
+signal <num_of_times INT>
+
+Example : signal 3
