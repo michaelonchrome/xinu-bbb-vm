@@ -82,11 +82,7 @@ shellcmd xsh_create(int nargs, char *args[]) {
         kprintf("Too many arguments\n");
         return 1;
     }
-    if( num_of_args == 0)
-        pid = create(func_to_call, 1024, priority, name_process, num_of_args);
-    else {
-        pid = create(func_to_call, 1024, priority, name_process, num_of_args, num_of_times);
-    }
+    pid = create(func_to_call, 1024, priority, name_process, 0);
     resume(pid);
     return 0;
 
