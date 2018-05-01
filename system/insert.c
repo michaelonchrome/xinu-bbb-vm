@@ -18,19 +18,22 @@ status	insert(
 	if (isbadqid(q) || isbadpid(pid)) {
 		return SYSERR;
 	}
+    /*
 
 	curr = firstid(q);
 	while (queuetab[curr].qkey >= key) {
 		curr = queuetab[curr].qnext;
 	}
-
-	/* Insert process between curr node and previous node */
-
-	prev = queuetab[curr].qprev;	/* Get index of previous node	*/
+	prev = queuetab[curr].qprev;	
 	queuetab[pid].qnext = curr;
 	queuetab[pid].qprev = prev;
 	queuetab[pid].qkey = key;
 	queuetab[prev].qnext = pid;
 	queuetab[curr].qprev = pid;
+   */ 
+    // This should add stuff to the end of the list 
+    //*
+    queuetab[pid].qkey = key;
+    pid = enqueue(pid, q);
 	return OK;
 }

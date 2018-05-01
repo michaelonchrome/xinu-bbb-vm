@@ -1,5 +1,15 @@
 /* ready.c - ready */
 
+// Need to mod this for FCFS
+// 1. Ready calls insert, has to change that too
+// 2. We dont care about pri in this assignment
+// 3. How do we handle null process? 
+// 4. what happens if there is an infinite loop?
+//      //clkhandler chekc the currpid
+//      // in the null process check the ready list and call resched
+//      and to yield to trigger context switch
+//      might have to change the rescudle
+
 #include <xinu.h>
 
 qid16	readylist;			/* Index of ready list		*/
